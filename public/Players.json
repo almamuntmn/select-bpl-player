@@ -1,0 +1,98 @@
+[
+  {
+    "player_cover": "https://picsum.photos/seed/cover1/400/200",
+    "player_img": "https://picsum.photos/seed/player1/200",
+    "name": "Arjun Mehta",
+    "country": "India",
+    "category": "Batsman",
+    "price": 120000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover2/400/200",
+    "player_img": "https://picsum.photos/seed/player2/200",
+    "name": "James Walker",
+    "country": "England",
+    "category": "Bowler",
+    "price": 95000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover3/400/200",
+    "player_img": "https://picsum.photos/seed/player3/200",
+    "name": "Imran Qureshi",
+    "country": "Pakistan",
+    "category": "All-Rounder",
+    "price": 135000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover4/400/200",
+    "player_img": "https://picsum.photos/seed/player4/200",
+    "name": "Michael Johnson",
+    "country": "Australia",
+    "category": "Wicket-Keeper",
+    "price": 105000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover5/400/200",
+    "player_img": "https://picsum.photos/seed/player5/200",
+    "name": "Shahid Rahman",
+    "country": "Bangladesh",
+    "category": "Batsman",
+    "price": 87000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover6/400/200",
+    "player_img": "https://picsum.photos/seed/player6/200",
+    "name": "Chris Nolan",
+    "country": "South Africa",
+    "category": "Bowler",
+    "price": 112000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover7/400/200",
+    "player_img": "https://picsum.photos/seed/player7/200",
+    "name": "Rashid Al-Mansoor",
+    "country": "UAE",
+    "category": "All-Rounder",
+    "price": 76000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover8/400/200",
+    "player_img": "https://picsum.photos/seed/player8/200",
+    "name": "Liam O’Connor",
+    "country": "Ireland",
+    "category": "Batsman",
+    "price": 69000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover9/400/200",
+    "player_img": "https://picsum.photos/seed/player9/200",
+    "name": "Kumar Perera",
+    "country": "Sri Lanka",
+    "category": "Bowler",
+    "price": 98000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover10/400/200",
+    "player_img": "https://picsum.photos/seed/player10/200",
+    "name": "Jason Smith",
+    "country": "New Zealand",
+    "category": "All-Rounder",
+    "price": 122000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover11/400/200",
+    "player_img": "https://picsum.photos/seed/player11/200",
+    "name": "David Brown",
+    "country": "West Indies",
+    "category": "Wicket-Keeper",
+    "price": 91000
+  },
+  {
+    "player_cover": "https://picsum.photos/seed/cover12/400/200",
+    "player_img": "https://picsum.photos/seed/player12/200",
+    "name": "Hasan Karim",
+    "country": "Afghanistan",
+    "category": "Bowler",
+    "price": 84000
+  }
+]
