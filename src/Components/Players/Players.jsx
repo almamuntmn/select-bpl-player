@@ -1,17 +1,56 @@
 import { useState } from "react";
 import Player from "../Player/Player";
 import SelectedPlayers from "../SelectedPlayers/SelectedPlayers";
+import { ToastContainer, toast } from 'react-toastify';
 
-const Players = ({ players }) => {
+const Players = ({ players, coin, setCoin }) => {
 
     const [selectedPlayers, setSelectedPlayers] = useState([]);
     const [activeTab, setActiveTab] = useState("available");
 
-    const handledAddSelectedPlayers = (player) => {
-        if (!selectedPlayers.includes(player))
-            console.log('Player added')
-        setSelectedPlayers([...selectedPlayers, player]);
 
+    const handledAddSelectedPlayers = (player) => {
+        if (selectedPlayers.length >= 7) {
+            toast.error("You can’t select more than 7 players!", {
+                position: "top-center",
+                autoClose: 2000,
+                theme: "dark",
+            });
+            return;
+        }
+
+        if (coin < player.price) {
+            toast.error("You don't have enough coins to add this player!", {
+                position: "top-center",
+                autoClose: 2000,
+                theme: "dark",
+            });
+            return;
+        }
+
+        if (!selectedPlayers.includes(player)) {
+            toast.success("Your Player Added", {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "dark",
+            });
+            // console.log("Player added");
+            setSelectedPlayers([...selectedPlayers, player]);
+            setCoin(coin - player.price);
+
+
+        }
+    };
+
+    const handleRemovePlayer = (playerToRemove) => {
+        setSelectedPlayers(
+            selectedPlayers.filter(player => player.name !== playerToRemove.name)
+        );
+        setCoin(coin + playerToRemove.price);
     };
 
     // Filter available players
@@ -54,10 +93,7 @@ const Players = ({ players }) => {
 
                 <div className="mt-6">
                     {activeTab === "selected" &&
-                        selectedPlayers.map((selectedPlayers, idx) => (<SelectedPlayers
-                            key={idx}
-                            selectedPlayers={selectedPlayers}
-                        ></SelectedPlayers>))
+                        <SelectedPlayers selectedPlayers={selectedPlayers} handleRemovePlayer={handleRemovePlayer} setActiveTab={setActiveTab} />
                     }
                 </div>
             </div>

@@ -2,6 +2,7 @@ import { IoFlagSharp } from "react-icons/io5";
 
 const Player = ({ player, handledAddSelectedPlayers }) => {
 
+
     const { player_cover, player_img, name, country, category, price } = player
 
     return (
@@ -23,7 +24,8 @@ const Player = ({ player, handledAddSelectedPlayers }) => {
                 <h3 className="mb-3">{category}</h3>
                 <div className="flex justify-between">
                     <h3 className="text-orange-300">Price: ${price}</h3>
-                    <button onClick={() => handledAddSelectedPlayers(player)} className="text-sm border border-gray-300 py-1 px-2 rounded-md font-light cursor-pointer hover:bg-amber-300">Choose Player</button>
+                    <button onClick={() => handledAddSelectedPlayers(player)} 
+                     className="text-sm border border-gray-300 py-1 px-2 rounded-md font-light cursor-pointer hover:bg-amber-300">Choose Player</button>
                 </div>
             </div>
         </div>

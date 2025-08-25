@@ -4,6 +4,8 @@ import Header from './Components/Header/Header'
 import Hero from './Components/Hero/Hero'
 import Players from './Components/Players/Players';
 
+
+
 function App() {
   const [coin, setCoin] = useState(0);
   const [players, setPlayers] = useState([]);
@@ -13,6 +15,7 @@ function App() {
     setCoin(coin + amount);
   };
 
+  
   useEffect(() => {
     fetch('Players.json')
       .then(res => res.json())
@@ -22,7 +25,7 @@ function App() {
     <>
       <Header coin={coin}></Header>
       <Hero handleCoinAdd={handleCoinAdd}></Hero>
-      <Players players={players}></Players>
+      <Players players={players} coin={coin} setCoin={setCoin}></Players>
     </>
   )
 }
