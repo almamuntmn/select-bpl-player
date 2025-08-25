@@ -6,18 +6,18 @@ import Players from './Components/Players/Players';
 
 function App() {
   const [coin, setCoin] = useState(0);
-  const[players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState([]);
 
-  
+
   const handleCoinAdd = (amount) => {
     setCoin(coin + amount);
   };
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     fetch('Players.json')
-    .then(res => res.json())
-    .then(data => setPlayers(data))
-  },[])
+      .then(res => res.json())
+      .then(data => setPlayers(data))
+  }, [])
   return (
     <>
       <Header coin={coin}></Header>

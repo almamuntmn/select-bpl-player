@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Player from "../Player/Player";
+import SelectedPlayers from "../SelectedPlayers/SelectedPlayers";
 
 const Players = ({ players }) => {
 
@@ -40,22 +41,25 @@ const Players = ({ players }) => {
                     </button>
                 </div>
             </div>
-            <div className="grid grid-cols-3 gap-6">
-                { activeTab === "available" &&
-                    availablePlayers.map((player, idx) => <Player
-                        key={idx}
-                        player={player}
-                        handledAddSelectedPlayers={handledAddSelectedPlayers}
-                    ></Player>)
-                }
+            <div>
+                <div className="grid grid-cols-3 gap-6">
+                    {activeTab === "available" &&
+                        availablePlayers.map((player, idx) => <Player
+                            key={idx}
+                            player={player}
+                            handledAddSelectedPlayers={handledAddSelectedPlayers}
+                        ></Player>)
+                    }
+                </div>
 
-                { activeTab === "selected" &&
-                    selectedPlayers.map((player, idx) => (<Player
-                        key={idx}
-                        player={player}
-                        handledAddSelectedPlayers={() => { }}
-                    ></Player>))
-                }
+                <div className="mt-6">
+                    {activeTab === "selected" &&
+                        selectedPlayers.map((selectedPlayers, idx) => (<SelectedPlayers
+                            key={idx}
+                            selectedPlayers={selectedPlayers}
+                        ></SelectedPlayers>))
+                    }
+                </div>
             </div>
         </div>
     );
