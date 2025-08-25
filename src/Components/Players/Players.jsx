@@ -38,11 +38,8 @@ const Players = ({ players, coin, setCoin }) => {
                 draggable: true,
                 theme: "dark",
             });
-            // console.log("Player added");
             setSelectedPlayers([...selectedPlayers, player]);
             setCoin(coin - player.price);
-
-
         }
     };
 
@@ -53,27 +50,26 @@ const Players = ({ players, coin, setCoin }) => {
         setCoin(coin + playerToRemove.price);
     };
 
-    // Filter available players
     const availablePlayers = players.filter(
         player => !selectedPlayers.includes(player)
     );
 
 
     return (
-        <div className="">
-            <div className="flex justify-between mt-15 items-center">
-                <h1 className="text-2xl font-medium">
+        <div className="px-4 sm:px-6 md:px-8">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 gap-4">
+                <h1 className="text-xl sm:text-2xl font-medium">
                     {activeTab === "available" ? "Available Players" : "Selected Players"}
                 </h1>
-                <div className="border border-gray-400 rounded-md">
+                <div className="flex border border-gray-400 rounded-md overflow-hidden">
                     <button
-                        className={activeTab === "available" ? "font-semibold bg-amber-300 py-2 px-4" : "py-2 px-4"}
+                        className={activeTab === "available" ? "font-semibold bg-amber-300 py-2 px-3 sm:px-4" : "py-2 px-3 sm:px-4"}
                         onClick={() => setActiveTab("available")}
                     >
                         Available ({availablePlayers.length})
                     </button>
                     <button
-                        className={activeTab === "selected" ? "font-semibold bg-amber-300 py-2 px-4" : "py-2 px-4"}
+                        className={activeTab === "selected" ? "font-semibold bg-amber-300 py-2 px-3 sm:px-4" : "py-2 px-3 sm:px-4"}
                         onClick={() => setActiveTab("selected")}
                     >
                         Selected ({selectedPlayers.length})
@@ -81,7 +77,7 @@ const Players = ({ players, coin, setCoin }) => {
                 </div>
             </div>
             <div>
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 sm:gap-6 mt-6">
                     {activeTab === "available" &&
                         availablePlayers.map((player, idx) => <Player
                             key={idx}
@@ -97,6 +93,7 @@ const Players = ({ players, coin, setCoin }) => {
                     }
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

@@ -6,7 +6,7 @@ const Player = ({ player, handledAddSelectedPlayers }) => {
     const { player_cover, player_img, name, country, category, price } = player
 
     return (
-        <div className="border border-gray-300 rounded-xl p-4 text-left mt-10">
+        <div className="border border-gray-300 rounded-xl p-4 text-left mt-4">
             <img className="rounded-lg mb-4" src={player_cover} alt="" />
             <div className="">
                 <div className="flex items-center gap-3 mb-4">
