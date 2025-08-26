@@ -28,8 +28,8 @@ const Footer = () => {
                             <p className='text-xs font-light space-y-2 mb-2 lg:text-left'>Subscribe to our newsletter for the latest updates.</p>
                         </div>
                         <div className='flex flex-col sm:flex-row mt-3 gap-2 w-full'>
-                            <input className='bg-white rounded-l-md sm:rounded-md px-3 py-2 text-xs text-black w-full sm:w-auto' type="email" placeholder='Enter your email' />
-                            <button className='py-2 px-3 border border-amber-400 rounded-r-md sm:rounded-md bg-amber-400 cursor-pointer hover:bg-gray-300 hover:border-gray-300 text-xs text-black w-full sm:w-auto'>Subscribe</button>
+                            <input className='bg-white rounded sm:rounded-md px-3 py-2 text-xs text-black w-full sm:w-auto' type="email" placeholder='Enter your email' />
+                            <button className='py-2 px-3 border border-amber-400 rounded sm:rounded-md bg-amber-400 cursor-pointer hover:bg-gray-300 hover:border-gray-300 text-xs text-black w-full sm:w-auto'>Subscribe</button>
                         </div>
                     </div>
                 </div>

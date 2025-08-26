@@ -16,7 +16,7 @@ const Newsletter = () => {
             </div>
             <div className='flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto'>
                 <input className='text-sm sm:text-base py-2 px-4 border border-gray-300 rounded-lg w-full sm:w-auto' type="email" placeholder="Enter your email" />
-                <button className='py-2 px-4 sm:py-3 sm:px-6 border border-amber-400 rounded-lg bg-amber-400 cursor-pointer hover:bg-gray-300 hover:border-gray-300 w-full sm:w-auto text-sm sm:text-base'>Subscribe</button>
+                <button className='py-2 px-4 sm:py-2 sm:px-6 border border-amber-400 rounded-lg bg-amber-400 cursor-pointer hover:bg-gray-300 hover:border-gray-300 w-full sm:w-auto text-sm sm:text-base'>Subscribe</button>
             </div>
         </div>
     );
