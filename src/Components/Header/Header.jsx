@@ -7,11 +7,11 @@ const Header = ({ coin }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='flex flex-col sm:flex-row justify-between items-center lg:sticky top-0 bg-white/30 backdrop-blur-md border-b border-white/20 z-50 mb-6 px-4 sm:px-6 md:px-8 py-3'>
-            
+        <div className='flex flex-col sm:flex-row justify-between items-center sticky top-0 bg-white/30 backdrop-blur-md border-b border-white/20 z-50 mb-6 px-4 sm:px-6 md:px-8 py-3'>
+
             {/* Logo */}
-            <div className='mb-2 sm:mb-0'>
-                <img src={logo} alt="Logo" className='w-15 sm:w-32 md:w-20'/>
+            <div className='hidden md:block mb-2 sm:mb-0'>
+                <img src={logo} alt="Logo" className='w-15 sm:w-32 md:w-20' />
             </div>
 
             {/* Desktop / Tablet Menu and Coin */}
@@ -24,8 +24,8 @@ const Header = ({ coin }) => {
                 </ul>
 
                 <div className='flex items-center gap-1 border border-gray-300 rounded-md py-2 px-4'>
-                    <h1 className='text-sm'>{coin} Coin</h1> 
-                    <TbCoinFilled className='text-xl text-orange-300'/>
+                    <h1 className='text-sm'>{coin} Coin</h1>
+                    <TbCoinFilled className='text-xl text-orange-300' />
                 </div>
             </div>
 
@@ -39,8 +39,13 @@ const Header = ({ coin }) => {
                 </button>
 
                 <div className='flex items-center gap-1 border border-gray-300 rounded-md py-2 px-4'>
-                    <h1 className='text-sm'>{coin} Coin</h1> 
-                    <TbCoinFilled className='text-xl text-orange-300'/>
+                    <h1 className='text-sm'>{coin} Coin</h1>
+                    <TbCoinFilled className='text-xl text-orange-300' />
+                </div>
+                <div>
+                    <div className='mb-2 sm:mb-0'>
+                        <img src={logo} alt="Logo" className='w-15 sm:w-32 md:w-20' />
+                    </div>
                 </div>
             </div>
 

@@ -22,7 +22,6 @@ const SelectedPlayers = ({ selectedPlayers, handleRemovePlayer, setActiveTab }) 
             >
                 Add More Player
             </button>
-            <ToastContainer />
         </>
     );
 };
